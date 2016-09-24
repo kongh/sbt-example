@@ -1,0 +1,20 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+POST    /person                     controllers.Application.addPerson()
+GET     /persons                    controllers.Application.getPersons
+
+#Hello page
+GET     /hello                         controllers.HelloWorldController.index()
+GET     /json                          controllers.HelloWorldController.json()
+GET     /jsonArray                     controllers.HelloWorldController.jsonArray()
+GET     /cookie                        controllers.HelloWorldController.cookie()
+GET     /session                       controllers.HelloWorldController.sessionSave()
+GET     /sessionRead                       controllers.HelloWorldController.sessionRead()
+GET     /sayFromCommon                       controllers.HelloWorldController.sayFromCommon()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
